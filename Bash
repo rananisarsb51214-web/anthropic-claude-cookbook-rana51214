@@ -1,4 +1,5 @@
-npm run testnpm run testpytestNever commit:
+docker build -t claude-cookbook .
+docker run -p 8080:8080 claude-cookbooknpm run testnpm run testpytestNever commit:
 - .env
 - service-account.json
 - API keys
