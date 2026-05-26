@@ -1,4 +1,26 @@
-with client.messages.stream(
+import time
+from anthropic import RateLimitError
+
+MAX_RETRIES = 5
+
+for attempt in range(MAX_RETRIES):
+    try:
+        response = client.messages.create(
+            model="claude-sonnet-4-20250514",
+            max_tokens=512,
+            messages=[
+                {
+                    "role": "user",
+                    "content": "Analyze infrastructure"
+                }
+            ]
+        )
+
+        break
+
+    except RateLimitError:
+        wait_time = 2 ** attempt
+        time.sleep(wait_time)with client.messages.stream(
     model="claude-sonnet-4-20250514",
     max_tokens=1024,
     messages=[
