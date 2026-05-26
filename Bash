@@ -1,4 +1,4 @@
-Never commit:
+pytestNever commit:
 - .env
 - service-account.json
 - API keys
