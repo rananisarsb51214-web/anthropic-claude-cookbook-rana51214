@@ -1,7 +1,7 @@
 from anthropic import Anthropic
 
 client = Anthropic(
-    api_key="YOUR_API_KEY"
+    api_key="whsec_P2hWteHoCcimLXd3sY3wiYhGE7Oh/"
 )
 
 response = client.messages.create(
@@ -15,4 +15,4 @@ response = client.messages.create(
     ]
 )
 
-print(response.content)
+print(response.content)https://claude.ai/public/artifacts/ac60473f-85e6-4958-8b3f-29fee57dc9ab
