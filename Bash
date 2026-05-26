@@ -1,4 +1,4 @@
-pytestNever commit:
+npm run testpytestNever commit:
 - .env
 - service-account.json
 - API keys
