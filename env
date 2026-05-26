@@ -1,0 +1,5 @@
+ANTHROPIC_API_KEY=your_api_key
+GOOGLE_CLOUD_PROJECT=your_project
+FIREBASE_PROJECT_ID=your_project_id
+VECTOR_DB_URL=your_vector_database
+LOG_LEVEL=info
