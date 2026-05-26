@@ -1,0 +1,14 @@
+exports.generateClaudeResponse = async (req, res) => {
+  try {
+    const response = await anthropic.messages.create({
+      model: 'claude-sonnet-4-20250514',
+      max_tokens: 512,
+      messages: req.body.messages,
+    })
+
+    res.json(response)
+  } catch (error) {
+    console.error(error)
+    res.status(500).json({ error: 'Internal Server Error' })
+  }
+}
