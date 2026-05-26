@@ -1,2 +1,6 @@
-firebase init
+Never commit:
+- .env
+- service-account.json
+- API keys
+- access tokensfirebase init
 firebase deploy
