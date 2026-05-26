@@ -1,4 +1,13 @@
-import time
+response = client.messages.create(
+    model="claude-sonnet-4-20250514",
+    max_tokens=1024,
+    messages=[
+        {
+            "role": "user",
+            "content": "Return deployment JSON schema"
+        }
+    ]
+)import time
 from anthropic import RateLimitError
 
 MAX_RETRIES = 5
