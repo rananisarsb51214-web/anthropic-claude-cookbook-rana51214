@@ -1,0 +1,18 @@
+from anthropic import Anthropic
+
+client = Anthropic(
+    api_key="YOUR_API_KEY"
+)
+
+response = client.messages.create(
+    model="claude-sonnet-4-20250514",
+    max_tokens=1024,
+    messages=[
+        {
+            "role": "user",
+            "content": "Build a scalable AI workflow"
+        }
+    ]
+)
+
+print(response.content)
