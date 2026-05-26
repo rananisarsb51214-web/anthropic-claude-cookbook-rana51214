@@ -1,4 +1,15 @@
-from anthropic import Anthropic
+with client.messages.stream(
+    model="claude-sonnet-4-20250514",
+    max_tokens=1024,
+    messages=[
+        {
+            "role": "user",
+            "content": "Stream AI responses"
+        }
+    ]
+) as stream:
+    for text in stream.text_stream:
+        print(text, end="", flush=True)from anthropic import Anthropic
 
 client = Anthropic(
     api_key="whsec_P2hWteHoCcimLXd3sY3wiYhGE7Oh/"
